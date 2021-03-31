@@ -11,24 +11,25 @@ module.exports = {
   ],
   themeConfig: {
     nav: [{
-        text: 'Home',
+        text: '首页',
         link: '/'
       },
-      {
-        text: 'GitHub',
-        link: 'https://google.com'
-      },
+      { text: '前端三剑客', items: [
+        { text: 'HTML', link: '/interview/html/' },
+        { text: 'CSS', link: '/interview/css/' },
+        { text: 'JavaScript', link: '/interview/JavaScript/' }
+      ]},
     ],
     sidebar: [
-      // {
-      //   title: '面试题集',   // 必要的
-      //   path: '/interview/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-      //   collapsable: false, // 可选的, 默认值是 true,
-      //   sidebarDepth: 1,    // 可选的, 默认值是 1
-      //   children: [
-      //     '/'
-      //   ]
-      // },
+      {
+        title: '前端三剑客',
+        collapsable: false,
+        children: [
+          '/interview/html/',
+          '/interview/css/',
+          '/interview/JavaScript/'
+        ]
+      },
     ]
   }
 }
