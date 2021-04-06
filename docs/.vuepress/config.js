@@ -2,34 +2,41 @@ module.exports = {
   base: '/vuepress-blog/',
   description: '前端笔记',
   head: [
-    ['link',
+    [
+      'link',
       {
         rel: 'icon',
-        href: '/icon.png'
-      }
+        href: '/icon.png',
+      },
     ],
   ],
   themeConfig: {
-    nav: [{
+    lastUpdated: '上次更新',
+    nav: [
+      {
         text: '首页',
-        link: '/'
+        link: '/',
       },
-      { text: '前端三剑客', items: [
-        { text: 'HTML', link: '/interview/html/' },
-        { text: 'CSS', link: '/interview/css/' },
-        { text: 'JavaScript', link: '/interview/JavaScript/' }
-      ]},
+      {
+        text: '面试题集',
+        link: '/interview/',
+        // items: [
+        //   { text: 'HTML', link: '/interview/html/' },
+        //   { text: 'CSS', link: '/interview/css/' },
+        //   { text: 'JavaScript', link: '/interview/JavaScript/' },
+        // ],
+      },
     ],
     sidebar: [
       {
-        title: '前端三剑客',
+        title: '面试题集',
         collapsable: false,
         children: [
           '/interview/html/',
           '/interview/css/',
-          '/interview/JavaScript/'
-        ]
+          '/interview/JavaScript/',
+        ],
       },
-    ]
-  }
+    ],
+  },
 }
